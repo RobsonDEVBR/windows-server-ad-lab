@@ -25,7 +25,7 @@ Adotei a estratégia de **Grupos de Segurança Globais** para organizar usuário
 > **Evidência:** ![Membros do Grupo](img/MembroGTI.png)
 
 
-##  Próximos Passos
+## 🚀 Próximos Passos
 - [ ] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
 - [ ] Configuração de Servidor de Arquivos (File Server) com permissões NTFS.
 - [ ] Automação de criação de usuários via PowerShell.
