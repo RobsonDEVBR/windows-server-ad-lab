@@ -37,6 +37,16 @@ Para elevar o nível de segurança e padronização das estações de trabalho, 
 > **Evidência:** ![Abrindo Painel](img/AbrindoPainel.png)
 > **Evidência:** ![Painel Bloqueado](img/PainelEConfBloq.png)
 
+### 🚫 Bloqueio de Dispositivos Removíveis (USB)
+Para mitigar riscos de vazamento de dados (DLP) e infecções por malware, apliquei uma política de nível de máquina para o bloqueio de armazenamento externo.
+
+* **Política:** *All Removable Storage classes: Deny all access* (Bloqueio total de portas USB para armazenamento).
+* **Escopo:** Aplicada à OU `COMPUTADORES`. O objeto *Computer* da estação Windows 10 foi movido do container padrão para a OU correspondente para receber a diretiva.
+* **Objetivo:** Garantir que a restrição de hardware seja aplicada fisicamente à estação de trabalho, independentemente do nível de privilégio do usuário que realizar o logon.
+
+> **Evidência:** ![Máquina na OU de Computadores](img/USB1.png)
+> **Evidência:** ![Regra de USB Ativa no Servidor](img/USB2.png)
+> **Evidência:** ![Bloqueio ao Tentar Acessar Unidade CD/DVD](img/USB3.png)
 ##  Próximos Passos
 - [x] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
 - [ ] Configuração de Servidor de Arquivos (File Server) com permissões NTFS.
