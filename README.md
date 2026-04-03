@@ -12,7 +12,7 @@ Implementei uma hierarquia de OUs personalizada para fugir dos containers padrã
 * **ADM / TI**: Segmentação por departamentos para aplicação de políticas distintas.
 * **COMPUTADORES**: Destinado ao gerenciamento de ativos de hardware e Hardening de estações de trabalho.
 
-> **Evidência:** ![Estrutura de OUs](img/Arvore1.png)
+>**Evidência:** ![Estrutura de OUs](img/Arvore1.png)
 > **Evidência:** ![Estrutura de OUs](img/Arvore.png)
 
 ### 2. Gestão de Grupos e Segurança (Metodologia AGDLP)
