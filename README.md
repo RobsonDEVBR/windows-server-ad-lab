@@ -37,7 +37,7 @@ Para elevar o nível de segurança e padronização das estações de trabalho, 
 > **Evidência:** ![Abrindo Painel](img/AbrindoPainel.png)
 > **Evidência:** ![Painel Bloqueado](img/PainelEConfBloq.png)
 
-### 🚫 Bloqueio de Dispositivos Removíveis (USB)
+###  Bloqueio de Dispositivos Removíveis (USB)
 Para mitigar riscos de vazamento de dados (DLP) e infecções por malware, apliquei uma política de nível de máquina para o bloqueio de armazenamento externo.
 
 * **Política:** *All Removable Storage classes: Deny all access* (Bloqueio total de portas USB para armazenamento).
