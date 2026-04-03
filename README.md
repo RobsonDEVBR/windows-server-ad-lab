@@ -24,8 +24,21 @@ Adotei a estratégia de **Grupos de Segurança Globais** para organizar usuário
 > **Evidência:** ![Membros do Grupo](img/MembroDe.png)
 > **Evidência:** ![Membros do Grupo](img/MembroGTI.png)
 
+### 🔐 Implementação de Políticas de Grupo (GPO) - Hardening
+Para elevar o nível de segurança e padronização das estações de trabalho, implementei a primeira política de restrição no domínio.
+
+* **Política:** Bloqueio de acesso ao Painel de Controle e Configurações do Sistema.
+* **Escopo:** Aplicada especificamente à OU `TI` para fins de homologação.
+* **Objetivo:** Impedir que usuários finais realizem alterações críticas no sistema operacional, reduzindo o número de chamados por desconfiguração e aumentando a integridade do ambiente.
+* **Validação:** Após a execução do comando `gpupdate /force` na estação cliente, a restrição foi aplicada com sucesso, bloqueando tentativas de acesso administrativo por parte do usuário comum.
+
+> **Evidência:** ![Criando Políticas](img/CriandoPoliticaTI.png)
+> **Evidência:** ![Proibindo Acesso ao Painel e Configurações](img/ProibindoAcessoPainelEConf.png)
+> **Evidência:** ![Abrindo Painel](img/AbrindoPainel.png)
+> **Evidência:** ![Painel Bloqueado](img/PainelEConfBloq.png)
 
 ## 🚀 Próximos Passos
-- [ ] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
+- [x] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
 - [ ] Configuração de Servidor de Arquivos (File Server) com permissões NTFS.
 - [ ] Automação de criação de usuários via PowerShell.
+
