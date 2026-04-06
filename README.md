@@ -56,10 +56,15 @@ Para garantir a confidencialidade e integridade dos dados da empresa, implemente
 * **Aplicação do AGDLP na Prática:** O acesso não é dado ao usuário, mas sim ao grupo de segurança. A pasta `TI_Confidencial` foi restrita para aceitar modificações apenas do grupo global `G_TI_AcessoFull`.
 
 > **Evidência:** ![Criando C:\Arquivo_Matriz\TI_Confidencial](img/NTFS1.png)
+* **Criando C:\Arquivo_Matriz\TI_Confidencial
 > **Evidência:** ![Adicionando Grupo G_TI_AcessoFull](img/NTFS2.png)
+* **Adicionando Grupo G_TI_AcessoFull
 > **Evidência:** ![Adicionando Permissão Modify permitindo trabalhar dentro da pasta mas sem controle total"Full Control"Para que o Usuário não controle as senhas e segurança](img/NTFS3.png)
-> **Evidência:** ![Grupo Adicionado Usuários Removidos e Herança desabilitada  ](img/NTFS4.png)
+* **Adicionando Permissão Modify permitindo trabalhar dentro da pasta mas sem controle total"Full Control"Para que o Usuário não controle as senhas e segurança
+> **Evidência:** ![Grupo Adicionado Usuários Removidos e Herança desabilitada](img/NTFS4.png)
+* **Grupo Adicionado Usuários Removidos e Herança desabilitada
 > **Evidência:** ![Acesso Mapeado Windows 10 na rede](img/NTFS5.png)
+* **Acesso Mapeado Windows 10 na rede
 
 ## 🚀 Próximos Passos
 - [x] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
