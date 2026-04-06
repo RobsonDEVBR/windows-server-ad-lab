@@ -47,8 +47,22 @@ Para mitigar riscos de vazamento de dados (DLP) e infecções por malware, apliq
 > **Evidência:** ![Máquina na OU de Computadores](img/USB1.png)
 > **Evidência:** ![Regra de USB Ativa no Servidor](img/USB2.png)
 > **Evidência:** ![Bloqueio ao Tentar Acessar Unidade CD/DVD](img/USB3.png)
-##  Próximos Passos
+
+###  Servidor de Arquivos (File Server) e Segurança NTFS
+Para garantir a confidencialidade e integridade dos dados da empresa, implementei um Servidor de Arquivos utilizando a metodologia de acesso de menor privilégio.
+
+* **Arquitetura de Permissões:** Utilização do modelo de "Duas Portas". Acesso amplo na camada de Compartilhamento (Share) e restrição granular na camada de Segurança (NTFS).
+* **Quebra de Herança:** A herança de diretórios foi desabilitada para garantir que pastas departamentais tenham controle de acesso exclusivo.
+* **Aplicação do AGDLP na Prática:** O acesso não é dado ao usuário, mas sim ao grupo de segurança. A pasta `TI_Confidencial` foi restrita para aceitar modificações apenas do grupo global `G_TI_AcessoFull`.
+
+> **Evidência:** ![Criando C:\Arquivo_Matriz\TI_Confidencial](img/NTFS1.png)
+> **Evidência:** ![Adicionando Grupo G_TI_AcessoFull]((img/NTFS2.png))
+> **Evidência:** ![Adicionando Permissão Modify permitindo trabalhar dentro da pasta mas sem controle total"Full Control"Para que o Usuário não controle as senhas e segurança](img/NTFS3.png)
+> **Evidência:** ![Grupo Adicionado Usuários Removidos e Herança desabilitada  ](img/NTFS4.png)
+> **Evidência:** ![Acesso Mapeado Windows 10 na rede](img/NTFS5.png)
+
+## 🚀 Próximos Passos
 - [x] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
-- [ ] Configuração de Servidor de Arquivos (File Server) com permissões NTFS.
+- [x] Configuração de Servidor de Arquivos (File Server) com permissões NTFS.
 - [ ] Automação de criação de usuários via PowerShell.
 
