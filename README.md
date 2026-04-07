@@ -13,7 +13,7 @@
 | Serviços | AD DS, DNS, GPO, File Server (NTFS) |
 | Automação | PowerShell |
 ##  Objetivo do Projeto
-Estabelecer uma fundação sólida de diretório (Active Directory) que permita escalabilidade, automação de políticas e controle rígido de acessos (RBAC - Role-Based Access Control).
+Lab montado para praticar a estruturação de um AD do zero — OUs, grupos de segurança, GPOs e File Server — simulando o ambiente de uma empresa com sede em Caxambu. Toda decisão técnica está documentada com o raciocínio por trás dela.
 
 ##  Implementação Técnica
 
@@ -79,11 +79,11 @@ Para garantir a confidencialidade e integridade dos dados da empresa, implemente
 * **Acesso Mapeado Windows 10 na rede**
 
 ###  Automação de Identidades via PowerShell (Scripting)
-Para otimizar o *onboarding* de novos colaboradores e reduzir a margem de erro humano, desenvolvi uma automação para a criação em massa de contas no Active Directory.
+Criar usuário por usuário na interface gráfica não escala. Escrevi um script que lê um CSV simulando uma exportação do RH e cria as contas automaticamente nas OUs certas.
 
  **[Clique aqui para ver o script completo e a planilha CSV base na pasta /Scripts](./Scripts/)**
 
-* **A Lógica de Negócio:** O script consome um arquivo de dados (`.csv`) simulando uma exportação do RH. Através de laços de repetição (`foreach`) e regras condicionais (`if/else`), o motor valida o departamento e aloca o funcionário na OU correta.
+* **A Lógica de Negócio:** O script lê o CSV linha por linha, verifica o campo Departamento e joga o usuário na OU correspondente (ADM ou TI). Se o departamento não bater com nenhuma OU cadastrada, o script pula e registra o erro.
 * **Segurança por Padrão:** As senhas temporárias são geradas via *SecureString* e a política de "Exigir alteração de senha no primeiro logon" é forçada via código para todas as novas identidades.
 > **Evidência 1 - Criação Arquivo csv pasta Script:** > ![Script PowerShell Executando](img/PS1.png)
 > **Evidência 2 - Preenchendo Dados:** > ![Script PowerShell Executando](img/PS2.png)
