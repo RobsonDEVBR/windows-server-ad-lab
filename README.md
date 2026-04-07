@@ -81,7 +81,7 @@ Para garantir a confidencialidade e integridade dos dados da empresa, implemente
 ###  Automação de Identidades via PowerShell (Scripting)
 Para otimizar o *onboarding* de novos colaboradores e reduzir a margem de erro humano, desenvolvi uma automação para a criação em massa de contas no Active Directory.
 
- **[Clique aqui para ver o script completo e a planilha CSV base na pasta /scripts](./scripts/)**
+ **[Clique aqui para ver o script completo e a planilha CSV base na pasta /Scripts](./Scripts/)**
 
 * **A Lógica de Negócio:** O script consome um arquivo de dados (`.csv`) simulando uma exportação do RH. Através de laços de repetição (`foreach`) e regras condicionais (`if/else`), o motor valida o departamento e aloca o funcionário na OU correta.
 * **Segurança por Padrão:** As senhas temporárias são geradas via *SecureString* e a política de "Exigir alteração de senha no primeiro logon" é forçada via código para todas as novas identidades.
