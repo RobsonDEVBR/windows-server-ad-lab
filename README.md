@@ -90,9 +90,10 @@ Criar usuário por usuário na interface gráfica não escala. Escrevi um script
 > **Evidência 3 - Utilizando Script PowerShell via CMD :** > ![Usuários Criados nas OUs](img/PS3.png)
 > **Evidência 4 - Resultado no Active Directory Pasta ADM:** > ![Usuários Criados nas OUs](img/PS4.png)
 > **Evidência 5 - Resultado no Active Directory Pasta TI:** > ![Usuários Criados nas OUs](img/PS5.png)
-##  Próximos Passos (Fechamento do Mês 1)
+##  Próximos Passos (Mês 1 — Em andamento)
 - [x] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
 - [x] Configuração de Servidor de Arquivos (File Server) com restrição NTFS.
 - [x] Automação de criação de usuários via PowerShell.
-- [ ] Configuração do Servidor de Impressão (Print Server) e GPO de mapeamento.
-- [ ] Liberação e testes de Acesso Remoto corporativo.
+- [ ] Implementação de Política de Senhas e Bloqueio de Conta via GPO.
+- [ ] Configuração de Auditoria de Eventos de Logon (Logs de Segurança).
+- [ ] Liberação de Acesso Remoto (RDP) restrito via GPO para o Grupo de TI.
