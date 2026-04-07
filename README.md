@@ -78,8 +78,21 @@ Para garantir a confidencialidade e integridade dos dados da empresa, implemente
 > **Evidência:** ![Acesso Mapeado Windows 10 na rede](img/NTFS5.png)
 * **Acesso Mapeado Windows 10 na rede**
 
-## 🚀 Próximos Passos
-- [x] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
-- [x] Configuração de Servidor de Arquivos (File Server) com permissões NTFS.
-- [ ] Automação de criação de usuários via PowerShell.
+### ⚙️ Automação de Identidades via PowerShell (Scripting)
+Para otimizar o *onboarding* de novos colaboradores e reduzir a margem de erro humano, desenvolvi uma automação para a criação em massa de contas no Active Directory.
 
+📂 **[Clique aqui para ver o script completo e a planilha CSV base na pasta /scripts](./scripts/)**
+
+* **A Lógica de Negócio:** O script consome um arquivo de dados (`.csv`) simulando uma exportação do RH. Através de laços de repetição (`foreach`) e regras condicionais (`if/else`), o motor valida o departamento e aloca o funcionário na OU correta.
+* **Segurança por Padrão:** As senhas temporárias são geradas via *SecureString* e a política de "Exigir alteração de senha no primeiro logon" é forçada via código para todas as novas identidades.
+> **Evidência 1 - Criação Arquivo csv pasta Script:** > ![Script PowerShell Executando](img/PS1.png)
+> **Evidência 2 - Preenchendo Dados:** > ![Script PowerShell Executando](img/PS2.png)
+> **Evidência 3 - Utilizando Script PowerShell via CMD :** > ![Usuários Criados nas OUs](img/PS3.png)
+> **Evidência 4 - Resultado no Active Directory Pasta ADM:** > ![Usuários Criados nas OUs](img/PS4.png)
+> **Evidência 5 - Resultado no Active Directory Pasta TI:** > ![Usuários Criados nas OUs](img/PS5.png)
+## 🚀 Próximos Passos (Fechamento do Mês 1)
+- [x] Implementação de GPOs de segurança (Bloqueio de USB e Painel de Controle).
+- [x] Configuração de Servidor de Arquivos (File Server) com restrição NTFS.
+- [x] Automação de criação de usuários via PowerShell.
+- [ ] Configuração do Servidor de Impressão (Print Server) e GPO de mapeamento.
+- [ ] Liberação e testes de Acesso Remoto corporativo.
